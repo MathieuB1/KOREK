@@ -65,7 +65,7 @@ services:
   nginx:
     build: ./nginx
     depends_on:
-      - web_rest
+      - web_socket
     volumes:
       - media/:/media/:ro
       - serverlog:/var/log/nginx/
