@@ -35,7 +35,6 @@ class Product(models.Model):
         super(Product, self).save(*args, **kwargs)
 
 
-
 def user_image_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
     return 'Products_Image/{0}/{1}'.format(instance.product.owner.id, unidecode(filename))
