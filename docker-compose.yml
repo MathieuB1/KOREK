@@ -6,6 +6,7 @@ services:
     image: bitnami/postgresql:11
     environment:
       - POSTGRESQL_DATABASE=korek_db
+      - POSTGRESQL_PASSWORD=postgres
     volumes:
       - pgdata:/bitnami
 
@@ -68,7 +69,7 @@ services:
       - web_socket
     volumes:
       - media/:/media/:ro
-      - serverlog:/var/log/nginx/
+      - ssl_cetificate:/etc/letsencrypt/
     ports:
       - "80:80"
       - "443:443"
@@ -76,6 +77,6 @@ services:
 volumes:
   pgdata: {}
   influxdata: {}
-  serverlog: {}
   redis_data: {}
   media: {}
+  ssl_cetificate:  {}
