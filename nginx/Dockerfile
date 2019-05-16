@@ -13,5 +13,6 @@ COPY ./app.conf /etc/nginx/conf.d/app.conf
 
 # Configure Nginx for Let's Letsencrypt
 COPY ./ssl_conf/generate_ssl.sh /generate_ssl.sh
+RUN chmod +x generate_ssl.sh
 COPY ./ssl_conf/options-ssl-nginx.conf /etc/letsencrypt_nginx_conf/options-ssl-nginx.conf
 COPY ./ssl_conf/ssl-dhparams.pem /etc/letsencrypt_nginx_conf/ssl-dhparams.pem 
