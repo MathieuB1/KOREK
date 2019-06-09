@@ -1,8 +1,4 @@
 env:
-  # You may want to update this to whatever the latest version is, or keep it
-  # the same as your local machines. However, I have only tested it with 1.8.0+.
-  # There should be a time in the future when this is not necessary - it is
-  # explained in more detail below.
   DOCKER_COMPOSE_VERSION: 1.8.0
 before_install:
   # update is required to update the repositories to see the new packages for
@@ -29,4 +25,6 @@ before_install:
   # whatever reason it's best to report that now before your tests start
   # otherwise it can be really tricky to debug why tests are failing sometimes.
   - docker ps
-  - sleep 60 && docker exec -it $(docker ps | grep web_rest_1 | awk '{print $NF}') /bin/bash -c "cd /code && python runtests.py"
+
+script:
+  - sleep 30 && docker exec -it $(docker ps | grep web_rest_1 | awk '{print $NF}') /bin/bash -c "cd /code && python runtests.py"
