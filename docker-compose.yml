@@ -69,8 +69,6 @@ services:
     depends_on:
       - web_socket
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./media/:/media/:ro
       - ssl_cetificate:/etc/letsencrypt/
     ports:
