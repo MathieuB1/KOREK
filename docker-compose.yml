@@ -3,12 +3,13 @@ version: '3'
 services:
 
   postgres_korek:
-    image: bitnami/postgresql:11
+    image: mdillon/postgis:11
     environment:
-      - POSTGRESQL_DATABASE=korek_db
-      - POSTGRESQL_PASSWORD=postgres
+      - POSTGRES_DB=korek_db
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
     volumes:
-      - pgdata:/bitnami
+      - pgdata:/var/lib/postgresql/data
 
   redis:
     image: 'bitnami/redis:5.0-debian-9'
