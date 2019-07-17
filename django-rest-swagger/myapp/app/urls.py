@@ -19,13 +19,15 @@ router.register(r'profiles', views.ProfileImageViewSet)
 router.register(r'categories', views.CategoryViewSet)
 router.register(r'tags', views.TagViewSet)
 router.register(r'comment', views.CommentViewSet)
+router.register(r'intersect', views.IntersectViewSet)
+
 
 urlpatterns1 = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     # Usual Rest API
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api-token-auth/', obtain_jwt_token)
+    url(r'^api-token-auth/', obtain_jwt_token),
 ]
 
 schema_view = get_swagger_view(title='KOREK API', patterns=urlpatterns1)
