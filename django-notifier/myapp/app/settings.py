@@ -221,8 +221,8 @@ LOGIN_REDIRECT_URL = '/'
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4100',
     'https://localhost:4100',
-    'http://korek.ml:4100'
-    'https://korek.ml:4100'
+    'http://korek.ml:4100',
+    'https://korek.ml:4100',
 )
 
 
