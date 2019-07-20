@@ -288,8 +288,9 @@ CHANNEL_LAYERS = {
 LOGIN_REDIRECT_URL = '/'
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:4100',
-    '35.241.210.208:4100',
-    'korek.ml:4100'
+    'http://localhost:4100',
+    'https://localhost:4100',
+    'http://korek.ml:4100'
+    'https://korek.ml:4100'
 )
 
