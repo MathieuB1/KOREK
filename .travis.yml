@@ -27,4 +27,4 @@ before_install:
   - docker ps
 
 script:
-  - sleep 30 && docker exec -it $(docker ps | grep web_rest_1 | awk '{print $NF}') /bin/bash -c "cd /code && python runtests.py"
+  - sleep 60 && docker exec -it $(docker ps | grep web_rest_1 | awk '{print $NF}') /bin/bash -c "cd /code && python runtests.py"
