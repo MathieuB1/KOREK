@@ -21,7 +21,6 @@ router.register(r'tags', views.TagViewSet)
 router.register(r'comment', views.CommentViewSet)
 router.register(r'intersect', views.IntersectViewSet)
 
-
 urlpatterns1 = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
